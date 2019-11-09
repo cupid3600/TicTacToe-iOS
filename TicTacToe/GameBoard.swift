@@ -34,6 +34,17 @@ extension Array where Iterator.Element == GamePiece {
         // TODO: Code this computed property to behave as described above.
         // This placeholder code just waits until the board is full, then signals a tie
         // --------------------------------------------------------------------------
+        
+        let lines = [[0,1,2], [3,4,5], [6,7,8], [0,3,6], [1,4,7], [2,5,8], [0,4,8], [2,4,6]]
+        for line in lines {
+            let a = self[line[0]]
+            let b = self[line[1]]
+            let c = self[line[2]]
+            if(a != .blank && a == b && b == c) {
+                return a
+            }
+        }
+        
         if !self.contains(.blank) {
             return .blank
         }

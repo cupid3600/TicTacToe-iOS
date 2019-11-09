@@ -4,6 +4,7 @@
 //
 
 import UIKit
+import PopupDialog
 
 class ViewController: UIViewController {
     private var boardPositions: [UIButton] = []
@@ -224,11 +225,23 @@ class ViewController: UIViewController {
         // TODO: Inform the user of the game-end result (this can be as creative or simple as you want to make it)
         // This placeholder code just throws up an alert
         // --------------------------------------------------------------------------
+        
+        /*
         let alert = UIAlertController(title: gameOverText, message: getGameResultText(forWinner: winner), preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: okButtonTitle, style: .default) { (_) in
             self.reset()
         })
         present(alert, animated: true, completion: nil)
+        */
+        
+        let popup = PopupDialog(title: gameOverText, message: getGameResultText(forWinner: winner), image: nil)
+        let okButton = DefaultButton(title: okButtonTitle, dismissOnTap: true) {
+            self.reset()
+        }
+        popup.addButtons([okButton])
+
+        // Present dialog
+        self.present(popup, animated: true, completion: nil)
         // --------------------------------------------------------------------------
     }
     

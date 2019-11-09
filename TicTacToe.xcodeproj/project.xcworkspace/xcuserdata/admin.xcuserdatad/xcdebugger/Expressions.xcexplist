@@ -3,15 +3,42 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "ViewController.handleGameOver(withWinner:):ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "isHumanPlayer1">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "AutomatedPlayer.minimax(newBoard:player:):AutomatedPlayer.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "newBoard[0]">
+            </PersistentString>
+            <PersistentString
+               value = "availSpots[0]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "Array&lt;A&gt;.gameWinner.getter:GameBoard.swift">
          <PersistentStrings>
+            <PersistentString
+               value = "self[1]">
+            </PersistentString>
             <PersistentString
                value = "self">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "ViewController.getGameResultText(forWinner:):ViewController.swift">
+         contextName = "AutomatedPlayer.takeTurn(onBoard:completion:):AutomatedPlayer.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "board.count">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
    </ContextStates>
 </VariablesViewState>
